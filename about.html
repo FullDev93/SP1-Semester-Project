@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Community Science Museum</title>
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Museum Logo">
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="exhibition.html">Exhibition</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main class="about-page">
+    <h1>About the Museum</h1>
+    <p class="subtitle">
+      Welcome to the Community Science Museum — where curiosity sparks adventure and science comes to life!
+    </p>
+
+    <section class="about-text">
+      <p>
+        We are an interactive, hands-on science museum located in the heart of the city, designed especially for curious young minds and their families. Our mission is to make science exciting, accessible, and fun for everyone.
+      </p>
+      <p>
+        At our museum, we believe that science isn’t just something you read about — it’s something you can touch, play with, and explore. From space and technology to biology and the wonders of the natural world, our exhibits invite children aged 7–15 (and their grown-ups) to discover how amazing science truly is.
+      </p>
+      <p>
+        Come join us — let’s explore the universe together, one question at a time!
+      </p>
+    </section>
+
+    <div class="about-image">
+      <img src="assets/about-illustration.png" alt="Science Illustration" />
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Community Science Museum. All rights reserved</p>
+    <div class="social-icons">
+      <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="assets/pinterest.png" alt="Pinterest"></a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
