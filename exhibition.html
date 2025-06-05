@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exhibition | Community Science Museum</title>
+  <link rel="stylesheet" href="css/exhibition.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"> 
+        <img src="assets/logo.png" alt="Logo">
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="exhibition.html" class="active">Exhibition</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>Our Exhibition</h1>
+    <div class="filters">
+      <button onclick="filterImages('all')">All</button>
+      <button onclick="filterImages('space')">Space</button>
+      <button onclick="filterImages('nature')">Nature</button>
+      <button onclick="filterImages('tech')">Technology</button>
+    </div>
+
+    <div class="gallery">
+      <div class="image-card space">
+        <img src="assets/images/space1.jpg" alt="Space Exhibit 1">
+      </div>
+      <div class="image-card space">
+        <img src="assets/images/space2.jpg" alt="Space Exhibit 2">
+      </div>
+      <div class="image-card nature">
+        <img src="assets/images/nature1.jpg" alt="Nature Exhibit 1">
+      </div>
+      <div class="image-card nature">
+        <img src="assets/images/nature2.jpg" alt="Nature Exhibit 2">
+      </div>
+      <div class="image-card tech">
+        <img src="assets/images/tech1.jpg" alt="Tech Exhibit 1">
+      </div>
+      <div class="image-card tech">
+        <img src="assets/images/tech2.jpg" alt="Tech Exhibit 2">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Community Science Museum. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

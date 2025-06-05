@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffbe6;
+  color: #333;
+}
+
+header {
+  background-color: #ffe4a3;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-links a.active {
+  color: orange;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.visit-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section {
+  margin: 2rem 0;
+}
+
+.info-section h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.info-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.map {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #ffa500;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons img {
+  height: 24px;
+  margin: 0 0.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #ffe4a3;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .visit-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .info-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .info-section p {
+    font-size: 0.95rem;
+  }
+}
