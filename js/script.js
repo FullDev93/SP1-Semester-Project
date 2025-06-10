@@ -1,10 +1,12 @@
 function toggleMenu() {
   const navLinks = document.querySelector('.nav-links');
-  if (navLinks) {
-    navLinks.classList.toggle('active');
+  const hamburger = document.querySelector('.hamburger');
+  if (navLinks && hamburger) {
     navLinks.classList.toggle('show');
+    hamburger.classList.toggle('open');
   }
 }
+
 
 // Only used on exhibition page, but safe to keep here for global use
 function filterImages(category) {
@@ -17,3 +19,4 @@ function filterImages(category) {
     }
   });
 }
+

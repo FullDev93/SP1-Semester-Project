@@ -6,7 +6,6 @@
 
 }
 
-
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
@@ -25,12 +24,7 @@ img {
   height: auto;
 }
 
-h1, h2, {
-  color:rgb(252, 252, 252);
-}
-p {
-  color: rgb(223, 223, 223);
-}
+
 /* Navbar */
 header {
   background-color:#E6D7B5;
@@ -92,7 +86,7 @@ header {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.44);
+  background-color: rgba(0, 0, 0, 0.07);
   padding: 40px;
   text-align: center;
   color: white;
@@ -208,7 +202,9 @@ footer p {
 }
 
 
+
 /* 📱 Responsive adjustments */
+
 @media (max-width: 768px) {
   .features {
     flex-direction: column;
@@ -230,28 +226,32 @@ footer p {
     height: 50%;
     border-radius: 0.5rem;
   }
+  .hamburger {
+    display: flex;
+  }
 
-
-/* Responsive */
-@media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; 
     width: 100%;
+    background-color: #E6D7B5;
+    position: absolute;
+    top: 80px; 
+    left: 0;
+    bottom: 65%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
   }
 
   .nav-links ul {
     flex-direction: column;
-    align-items: center;
-    background: #FFE9B3;
-    padding: 10px 0;
+    gap: 10px;
   }
 
   .nav-links.show {
-    display: block;
-  }
-
-  .hamburger {
-    display: flex;
+    display: flex; 
   }
 
   .overlay h1 {
@@ -262,3 +262,16 @@ footer p {
     font-size: 1rem;
   }
 }
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
