@@ -1,49 +1,79 @@
+* Reset and basic setup */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
+
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fffbe6;
+  line-height: 1.6;
+  background-color: #fff;
   color: #333;
 }
 
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar */
 header {
-  background-color: #ffe4a3;
-  padding: 1rem;
+  background-color:#E6D7B5;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
 }
 
 .nav-links ul {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  list-style: none;
+  gap: 20px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
+.nav-links li a {
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-.nav-links a.active {
-  color: orange;
+.nav-links li a:hover {
+  color: #F7931E;
 }
 
+/* Hamburger menu */
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  flex-direction: column;
   cursor: pointer;
+  gap: 4px;
 }
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
 
 main {
   padding: 2rem;
@@ -51,7 +81,7 @@ main {
 }
 
 .hero-image img {
-  width: 100%;
+  width: 30%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -78,55 +108,63 @@ main {
 }
 
 .map {
-  max-width: 100%;
+  max-width:30%;
   height: auto;
   margin-top: 1rem;
   border-radius: 8px;
 }
 
+/* Footer */
 footer {
-  background-color: #ffa500;
-  color: #fff;
+  background: #E6D7B5;
+  color: #000;
   text-align: center;
-  padding: 1.5rem;
-  margin-top: 3rem;
+  padding: 20px;
   position: relative;
+  width: 100%;
+}
+footer p {
+  color:rgb(0, 0, 0);
 }
 
-.social-icons {
-  margin-top: 0.5rem;
+.social {
+  margin-top: 10px;
 }
 
-.social-icons img {
-  height: 24px;
-  margin: 0 0.3rem;
+.social a img {
+  width: 25px;
+  margin: 0 8px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
-  }
-
-  .nav-links.active {
-    display: block;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background-color: #ffe4a3;
     width: 100%;
-    padding: 1rem;
   }
 
   .nav-links ul {
     flex-direction: column;
     align-items: center;
+    background: #FFE9B3;
+    padding: 10px 0;
   }
 
-  .hamburger {
+  .nav-links.show {
     display: block;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
+  .overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
   .visit-info h2 {
     font-size: 1.6rem;
   }
